@@ -1,0 +1,19 @@
+.divContact{
+    display: flexbox;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 2px solid gray;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+
+img{
+    border: solid;
+    border-radius: 4em; 
+    margin-right: 40px;
+}
+#left{
+    float: left;
+}
+

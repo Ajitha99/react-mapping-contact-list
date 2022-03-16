@@ -1,0 +1,16 @@
+
+div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+#layoutDiv{
+    border-style: solid;
+    width: 500px;
+    height: 570px;
+    overflow: auto;
+    margin: 50px;
+    /* text-align:justify; */
+}
