@@ -1,19 +1,33 @@
-import contact from "../styles/contact.css"
+import { useState } from "react"
+import "../styles/contact.css"
+import DetailContact from "./DetailContact";
+
+
 
 
 function Contact (props) {
-   
+    const [showResults, setShowResults] = useState(false)
+    const onClick = (e) => {
+        e.preventDefault();
+        setShowResults(true);
+    }
+
     return(
-        
-        
-        <div className="divContact">
-            <img id ="left" src={props.contactData.picture.large} alt="person"/>
-            <div>
+      
+            <div className="divContact">
+                    
+            <div className="imgDiv"><img id ="left" src={props.contactData.picture.large} alt="person"/></div>    
+            <div className="contactDiv">
                 <h1>{props.contactData.name.first} {props.contactData.name.last}</h1>
                 <h3>Home: {props.contactData.phone}</h3>
                 <h3>Mobile: {props.contactData.cell}</h3>
             </div>
+            {/* <div className="moreDiv"><a href="data.html" onClick={clickEvent(props.contactData)}>More Info</a></div>  */}
+            <div className="moreDiv"><button onClick={onClick}>More Info</button>
+                {showResults ? <DetailContact data = {props.contactData}/>: null}
+            </div>  
         </div>
+      
        
        
     )

@@ -8,9 +8,9 @@ div{
 
 #layoutDiv{
     border-style: solid;
-    width: 500px;
+    width: 600px;
     height: 570px;
     overflow: auto;
-    margin: 50px;
+    margin-top: 10px;
     /* text-align:justify; */
 }
