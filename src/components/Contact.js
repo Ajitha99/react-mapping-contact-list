@@ -7,9 +7,11 @@ import DetailContact from "./DetailContact";
 
 function Contact (props) {
     const [showResults, setShowResults] = useState(false)
+    // const [state,setState] = useState(false);
+    
     const onClick = (e) => {
-        e.preventDefault();
-        setShowResults(true);
+        // e.preventDefault();
+        setShowResults(prevState => !prevState);
     }
 
     return(
